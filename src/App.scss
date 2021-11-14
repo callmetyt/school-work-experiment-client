@@ -1,0 +1,21 @@
+.App {
+  height: 100vh;
+  color: #fff;
+  display: flow-root;
+  .video-react-video {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    object-fit: fill;
+    z-index: -2;
+  }
+  .overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background: rgba(51, 112, 255, 0.2);
+    z-index: -1;
+  }
+}

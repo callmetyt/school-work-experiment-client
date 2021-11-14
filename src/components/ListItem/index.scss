@@ -1,0 +1,46 @@
+.list-warp {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: auto;
+  margin-top: 20px;
+  width: 600px;
+  color: #000;
+  overflow: hidden;
+  .list-item {
+    padding: 5px 15px;
+    margin-bottom: 5px;
+    cursor: default;
+    .tle {
+      font-size: 20px;
+      color: #1f2329;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .icon {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+    .sub {
+      display: flex;
+      color: #646a73;
+      margin-top: 2px;
+      .lineDevider {
+        display: inline-block;
+        width: 1px;
+        margin: 0 8px;
+        background-color: #bbbfc4;
+      }
+    }
+    &:hover {
+      transition: all 0.2s linear;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+}

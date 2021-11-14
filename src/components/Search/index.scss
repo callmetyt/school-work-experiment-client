@@ -1,0 +1,44 @@
+.search {
+  margin-top: 17.5vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+
+  .tle {
+    cursor: default;
+    .text {
+      font-size: 48px;
+      letter-spacing: 4px;
+      font-weight: 800;
+    }
+    .sub {
+      letter-spacing: 6px;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 10px;
+      &::after,
+      &::before {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 74px;
+        position: absolute;
+        top: calc(50% - 1px);
+        background-image: linear-gradient(
+          270deg,
+          hsla(0, 0%, 100%, 0),
+          #fff 47%,
+          hsla(0, 0%, 100%, 0)
+        );
+      }
+      &::before {
+        right: 0;
+      }
+    }
+  }
+
+  .input {
+    margin-top: 20px;
+  }
+}

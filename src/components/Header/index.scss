@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  min-width: 530px;
+  padding: 0 64px;
+  position: fixed;
+  top: 0;
+
+  .logo {
+    display: flex;
+    cursor: default;
+    .tle {
+      position: relative;
+      margin-left: 3px;
+      .line1 {
+        position: absolute;
+        top: -14px;
+        font-size: 14px;
+      }
+      .line2 {
+        margin-top: 2px;
+        font-size: 20px;
+        letter-spacing: 4px;
+      }
+    }
+    .text {
+      margin-left: 10px;
+      padding: 4px 20px;
+      color: black;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+  }
+
+  .nav {
+    display: flex;
+    list-style-type: none;
+    li {
+      font-size: 14px;
+      cursor: default;
+      position: relative;
+      transition: 0.1s all linear;
+    }
+    li:hover {
+      transition: 0.1s linear all;
+      opacity: 0.5;
+    }
+    .active {
+      font-weight: bold;
+    }
+    .active::after {
+      content: "";
+      display: block;
+      bottom: -2px;
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      background-color: #fff;
+    }
+    :nth-child(n + 2) {
+      margin-left: 30px;
+    }
+  }
+}
