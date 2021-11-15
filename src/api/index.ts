@@ -10,4 +10,5 @@ export interface TResponseApi {
   };
 }
 
-export default { searchApi, deleteApi, addApi };
+export const apis = { searchApi, deleteApi, addApi };
+export default apis;

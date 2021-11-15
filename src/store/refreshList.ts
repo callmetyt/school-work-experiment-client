@@ -9,6 +9,4 @@ export function refreshList(newList: TListItem[]) {
   };
 }
 
-export type TRefreshList = typeof refreshList;
-
 export default refreshList;

@@ -1,4 +1,4 @@
-import { Action, createStore } from "redux";
+import { createStore } from "redux";
 import { REFRESH_LIST } from "./refreshList";
 import { UPDATE_SEARCH_KEY } from "./updateSearchKey";
 
@@ -12,9 +12,15 @@ export interface TListItem {
   _id: string;
 }
 
-interface TStore {
+export interface TStore {
   list: TListItem[];
   searchKey: string;
+}
+
+export interface TActionType {
+  type: typeof REFRESH_LIST | typeof UPDATE_SEARCH_KEY;
+  newList: TListItem[];
+  key: string;
 }
 
 const initialStore: TStore = {
@@ -22,8 +28,8 @@ const initialStore: TStore = {
   searchKey: "",
 };
 
-export const store = createStore<TStore, Action<any>, unknown, unknown>(
-  (state = initialStore, action: any) => {
+export const store = createStore<TStore, TActionType, any, any>(
+  (state = initialStore, action) => {
     switch (action.type) {
       case REFRESH_LIST:
         return {

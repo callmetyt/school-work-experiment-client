@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
 import ListItem from "../components/ListItem";
-import { TListItem } from "../store";
+import { TListItem, TStore } from "../store";
 import refreshList from "../store/refreshList";
 
-let mapStateToProps = (state: any) => {
+let mapStateToProps = (state: TStore) => {
   return {
     list: state.list,
     searchKey: state.searchKey,

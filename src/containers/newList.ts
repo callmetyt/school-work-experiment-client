@@ -1,11 +1,11 @@
 import { connect } from "react-redux";
 import NewListItem from "../components/NewListItem";
-import { TListItem } from "../store";
+import { TListItem, TStore } from "../store";
 import refreshList from "../store/refreshList";
 
-let mapStateToProps = (state: any) => {
+let mapStateToProps = (state: TStore) => {
   return {
-    key: state.key,
+    key: state.searchKey,
     list: state.list,
   };
 };
